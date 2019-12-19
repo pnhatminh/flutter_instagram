@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'screens/login_screen.dart';
+import 'screens/signup_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,6 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Instagram',
         debugShowCheckedModeBanner: false,
-        home: LoginScreen());
+        home: LoginScreen(),
+        routes: {
+          LoginScreen.id: (context) => LoginScreen(),
+          SignupScreen.id: (context) => SignupScreen(),
+        });
   }
 }

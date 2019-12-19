@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_instagram_firebase/screens/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
+  static final String id = "login_screen";
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -59,6 +61,17 @@ class _LoginScreenState extends State<LoginScreen> {
                     color: Colors.blue,
                     padding: EdgeInsets.all(10.0),
                     child: Text("Login",
+                        style: TextStyle(color: Colors.white, fontSize: 18.0))),
+              ),
+              SizedBox(height: 20.0),
+              Container(
+                width: 250.0,
+                child: FlatButton(
+                    onPressed: () =>
+                        Navigator.pushNamed(context, SignupScreen.id),
+                    color: Colors.blue,
+                    padding: EdgeInsets.all(10.0),
+                    child: Text("Go to Signup",
                         style: TextStyle(color: Colors.white, fontSize: 18.0))),
               )
             ]),
